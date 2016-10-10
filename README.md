@@ -1,2 +1,7 @@
 # cordova-plugin-ios-backgroundcolor
-Support for BackgroundColor config xml preference on iOS
+IOS Support for BackgroundColor preference in config.xml.
+
+### Installation
+```
+cordova plugin add https://github.com/wallneradam/cordova-plugin-ios-backgroundcolor.git
+```
