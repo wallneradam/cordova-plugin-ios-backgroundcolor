@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-ios-backgroundcolor",
+  "version": "0.1.0",
+  "description": "Cordova BackgroundColor Plugin for iOS",
+  "keywords": [
+    "cordova",
+    "BackgroundColor",
+    "iOS"
+  ],
+  "author": "Adam Wallner",
+  "license": "MIT"
+}
