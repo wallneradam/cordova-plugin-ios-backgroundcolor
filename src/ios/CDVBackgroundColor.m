@@ -21,11 +21,20 @@
 
 
 - (void)pluginInitialize {
-    NSString *setting = @"BackgroundColor";
-    if ([self settingForKey:setting]) {
-        UIColor *theColor = [self colorFromHexString:[self settingForKey:setting]];
+    // Set webview color
+    UIColor *theColor;
+    id backgroundColor = [self settingForKey:@"BackgroundColor"];
+    if (backgroundColor) {
+        theColor = [self colorFromHexString:backgroundColor];
         self.webView.backgroundColor = theColor;
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    }
+
+    // Set main view color as well
+    id mainBackgroundColor = [self settingForKey:@"MainViewBackgroundColor"];
+    if (!mainBackgroundColor && backgroundColor) mainBackgroundColor = backgroundColor;
+    if (mainBackgroundColor) {
+        theColor = [self colorFromHexString:mainBackgroundColor];
+        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
         UIView *topView = window.rootViewController.view;
         topView.backgroundColor = theColor;
     }
