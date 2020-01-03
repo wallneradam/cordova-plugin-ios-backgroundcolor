@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="hu.bitbaro.cordova-plugin-ios-backgroundcolor"
-        version="0.1.0">
+        version="0.1.1">
     <name>iOS BackgroundColor</name>
     <description>BackgroundColor plugin for iOS</description>
     <author>Adam Wallner</author>

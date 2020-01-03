@@ -25,6 +25,9 @@
     if ([self settingForKey:setting]) {
         UIColor *theColor = [self colorFromHexString:[self settingForKey:setting]];
         self.webView.backgroundColor = theColor;
+        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+        UIView *topView = window.rootViewController.view;
+        topView.backgroundColor = theColor;
     }
 }
 
